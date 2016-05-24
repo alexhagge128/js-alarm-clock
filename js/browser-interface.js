@@ -6,6 +6,9 @@ $(document).ready(function(){
   var alarm = new Alarm();
   setInterval(function(){alarm.getCurrentTime()}, 1000);
 
+
+
+//set alarm
   $("#formAlarm").submit(function(event){
     event.preventDefault();
 
