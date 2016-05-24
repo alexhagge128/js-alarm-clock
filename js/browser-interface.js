@@ -17,16 +17,23 @@ $(document).ready(function(){
       $(".alarmState").show();
     }, timer);
   });
+//Snooze adjust
+  $("#adjustSnooze").submit(function(event){
+    event.preventDefault();
 
+    snoozeTime = (($("#setSnooze").val()) * 1000);
+    console.log(snoozeTime);
+  });
+//alarm off button
   $("#getUp").click(function(){
     $(".alarmState").hide();
   });
-
+//snooze button
   $("#snooze").click(function(){
     $(".alarmState").hide();
 
     setTimeout(function(){
       $(".alarmState").show();
-    }, 5000);
+    }, snoozeTime);
   });
 });
