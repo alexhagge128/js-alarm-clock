@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Alarm Clock</title>
@@ -9,11 +10,18 @@
   <body>
     <h1 id='timer'></h1>
     <br>
-    <form>
+    <form id="formAlarm">
       <label for="setAlarm">Alarm Time:</label>
       <input type="time" name="setAlarm" id="setAlarm">
       <br>
       <button type="submit" class="btn btn-info" id="submitTime">Set Alarm</button>
+      <br>
     </form>
+    <br>
+    <div class="alarmState">
+      <h1 class="animated flash infinite">WAKE UP</h1>
+      <a class="btn btn-danger" id="snooze">Snooze</a>
+      <a class="btn btn-primary" id="getUp">Off</a>
+    </div>
   </body>
 </html>
